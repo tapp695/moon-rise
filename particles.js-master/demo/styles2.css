@@ -1,0 +1,687 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body 
+{
+    min-height: 100vh;
+    background: #0c192c;
+}
+.container 
+{
+    position: relative;
+    width: 100%;
+    height: 200vh;
+    overflow: hidden;
+}
+.bubbles 
+{
+    position: relative;
+    display: flex;
+}
+.bubbles span 
+{
+    position: relative;
+    width: 100px;
+    height: 2000px;
+    background: #4fc3dc;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 100px #4fc3dc44,
+    0 0 50px #4fc3dc,
+    0 0 100px #4fc3dc;
+    animation: animate 2000s linear infinite;
+    animation-duration: calc(10s / var(--i));
+}
+  
+.bubbles span:nth-child(even) {
+    background: #ff2d75;
+    box-shadow: 0 0 0 10px #ff2d7544, 0 0 50px #ff2d75, 0 0 100px #ff2d75;
+}
+@keyframes animate {
+    0% {
+      transform: translateY(100vh) scale(0);
+    }
+    100% {
+      transform: translateY(-10vh) scale(1);
+    }
+}
+
+.btn2 {
+    margin: 650px;
+    padding: 5px 10px;
+    border: none;
+    font-size: 25px;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    z-index: 9999; /* Ensures button stays on top of all elements */
+    margin: 10px;
+    
+    border-radius: 12px;
+  }
+  
+  .btn2::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
+  
+  /* glow effect */
+  .btn2::before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #ff0000,
+      #ff7300,
+      #fffb00,
+      #48ff00,
+      #00ffd5,
+      #002bff,
+      #ff00c8,
+      #ff0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+    opacity: 0;
+  }
+  
+  /* glowing animation */
+  @keyframes glowing {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  /* Hover effect */
+  .btn2:hover::before {
+    opacity: 1;
+  }
+  
+  .btn2:active:after {
+    background: transparent;
+  }
+  
+  .btn2:active {
+    color: #d9d1d1;
+    font-weight: bold;
+  
+  /* Add other styles as needed */
+  }
+    
+  .bt3 {
+    
+    padding: 5px 10px;
+    border: none;
+    font-size: 25px;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    z-index: 9999; /* Ensures button stays on top of all elements */
+    left: 40%;
+    
+    border-radius: 12px;
+  }
+  
+  .bt3::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
+  
+  /* glow effect */
+  .bt3::before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #ff0000,
+      #ff7300,
+      #fffb00,
+      #48ff00,
+      #00ffd5,
+      #002bff,
+      #ff00c8,
+      #ff0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+    opacity: 0;
+  }
+  
+  /* glowing animation */
+  @keyframes glowing {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  /* Hover effect */
+  .bt3:hover::before {
+    opacity: 1;
+  }
+  
+  .bt3:active:after {
+    background: transparent;
+  }
+  
+  .bt3:active {
+    color: #d9d1d1;
+    font-weight: bold;
+  
+  /* Add other styles as needed */
+  }
+  .s4 {
+    
+    padding: 5px 10px;
+    border: none;
+    font-size: 25px;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    z-index: 9999; /* Ensures button stays on top of all elements */
+    top: 20px;
+    right: 10%;
+    
+    border-radius: 12px;
+  }
+  
+  .s4::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
+  
+  /* glow effect */
+  .s4::before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #ff0000,
+      #ff7300,
+      #fffb00,
+      #48ff00,
+      #00ffd5,
+      #002bff,
+      #ff00c8,
+      #ff0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+    opacity: 0;
+  }
+  
+  /* glowing animation */
+  @keyframes glowing {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  /* Hover effect */
+  .s4:hover::before {
+    opacity: 1;
+  }
+  
+  .s4:active:after {
+    background: transparent;
+  }
+  
+  .s4:active {
+    color: #d9d1d1;
+    font-weight: bold;
+  
+  /* Add other styles as needed */
+  }
+  .btn2 {
+    position: absolute;
+    top: 10px; /* Distance from the top */
+    left: 10%; /* Position near the left side */
+    transform: translateX(-100%);
+}
+.bt3 {
+  position: absolute;
+  top: 20px; /* Distance from the top */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%);
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body 
+{
+    min-height: 100vh;
+    background: #0c192c;
+}
+.container 
+{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.bubbles 
+{
+    position: relative;
+    display: flex;
+}
+.bubbles span 
+{
+    position: relative;
+    width: 1000px;
+    height: 20px;
+    background: #4fc3dc;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #4fc3dc44,
+    0 0 50px #4fc3dc,
+    0 0 100px #4fc3dc;
+    animation: animate 2000s linear infinite;
+    animation-duration: calc(120s / var(--i));
+}
+  
+.bubbles span:nth-child(even) {
+    background: #ff2d75;
+    box-shadow: 0 0 0 10px #ff2d7544, 0 0 50px #ff2d75, 0 0 100px #ff2d75;
+}
+@keyframes animate {
+    0% {
+      transform: translateY(200vh) scale(0);
+    }
+    100% {
+      transform: translateY(-1vh) scale(1);
+    }
+}
+
+.btn2 {
+    margin: 650px;
+    padding: 5px 10px;
+    border: none;
+    font-size: 25px;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    z-index: 9999; /* Ensures button stays on top of all elements */
+    margin: 10px;
+    
+    border-radius: 12px;
+  }
+  
+  .btn2::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
+  
+  /* glow effect */
+  .btn2::before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #ff0000,
+      #ff7300,
+      #fffb00,
+      #48ff00,
+      #00ffd5,
+      #002bff,
+      #ff00c8,
+      #ff0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+    opacity: 0;
+  }
+  
+  /* glowing animation */
+  @keyframes glowing {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  /* Hover effect */
+  .btn2:hover::before {
+    opacity: 1;
+  }
+  
+  .btn2:active:after {
+    background: transparent;
+  }
+  
+  .btn2:active {
+    color: #d9d1d1;
+    font-weight: bold;
+  
+  /* Add other styles as needed */
+  }
+    
+  .bt3 {
+    
+    padding: 5px 10px;
+    border: none;
+    font-size: 25px;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    z-index: 9999; /* Ensures button stays on top of all elements */
+    left: 40%;
+    
+    border-radius: 12px;
+  }
+  
+  .bt3::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
+  
+  /* glow effect */
+  .bt3::before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #ff0000,
+      #ff7300,
+      #fffb00,
+      #48ff00,
+      #00ffd5,
+      #002bff,
+      #ff00c8,
+      #ff0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+    opacity: 0;
+  }
+  
+  /* glowing animation */
+  @keyframes glowing {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  /* Hover effect */
+  .bt3:hover::before {
+    opacity: 1;
+  }
+  
+  .bt3:active:after {
+    background: transparent;
+  }
+  
+  .bt3:active {
+    color: #d9d1d1;
+    font-weight: bold;
+  
+  /* Add other styles as needed */
+  }
+  .s4 {
+    
+    padding: 5px 10px;
+    border: none;
+    font-size: 25px;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    z-index: 9999; /* Ensures button stays on top of all elements */
+    top: 20px;
+    right: 10%;
+    
+    border-radius: 12px;
+  }
+  
+  .s4::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
+  
+  /* glow effect */
+  .s4::before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #ff0000,
+      #ff7300,
+      #fffb00,
+      #48ff00,
+      #00ffd5,
+      #002bff,
+      #ff00c8,
+      #ff0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+    opacity: 0;
+  }
+  
+  /* glowing animation */
+  @keyframes glowing {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  /* Hover effect */
+  .s4:hover::before {
+    opacity: 1;
+  }
+  
+  .s4:active:after {
+    background: transparent;
+  }
+  
+  .s4:active {
+    color: #d9d1d1;
+    font-weight: bold;
+  
+  /* Add other styles as needed */
+  }
+  .btn2 {
+    position: absolute;
+    top: 10px; /* Distance from the top */
+    left: 10%; /* Position near the left side */
+    transform: translateX(-100%);
+}
+.bt3 {
+  position: absolute;
+  top: 20px; /* Distance from the top */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%);
+}
+
+body {
+  min-height: 100vh;
+  background: #0c192c; /* Dark background for the bubbles */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif; /* Optional */
+  margin: 0; /* Remove unwanted margins */
+}
+
+.container {
+  position: absolute; /* Bubbles stay in the background */
+  width: 100%;
+  height: 200%;
+  z-index: 0; /* Behind all content */
+  overflow: hidden; /* Prevent unwanted scrollbars */
+}
+
+
+.wrapper {
+
+margin-top: 20%;
+  
+z-index: -100; /* Above the bubbles */
+background: none; /* Ensure no background for the text */
+}
+
+.typing-demo {
+  visibility: hidden; /* Hide text initially */
+  color: white; /* Text color */
+  font-family:MV Boli ; /* Font style */
+  font-size: 2em; /* Adjust font size */
+  white-space: nowrap; /* Prevent wrapping of text */
+  overflow: hidden; /* Hide overflow for typing effect */
+  /* Typing cursor effect */
+  animation: typing 2s steps(200, end), blink 0.5s step-end infinite;
+  animation-delay: var(--delay, 1s); /* Custom delay for each line */
+  background: none; /* Remove any background for the text animation */
+  animation-fill-mode: forwards; /* Persist end state of the animation */
+}
+
+/* Typing animation */
+@keyframes typing {
+  from {
+    width: 0;
+    visibility: visible; /* Text becomes visible when animation starts */
+  }
+  to {
+    width: 100%;
+    visibility: visible; /* Text becomes visible when animation end */
+  }
+}
+
+/* Cursor blinking animation */
+.typing-demo.no-cursor {
+  border-right: none; /* Completely remove the cursor */
+}

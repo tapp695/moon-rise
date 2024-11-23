@@ -1,0 +1,230 @@
+/* =============================================================================
+   HTML5 CSS Reset Minified - Eric Meyer
+   ========================================================================== */
+
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
+body{line-height:1}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+nav ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:none}
+a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent;text-decoration:none}
+mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}
+del{text-decoration:line-through}
+abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
+table{border-collapse:collapse;border-spacing:0}
+hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
+input,select{vertical-align:middle}
+li{list-style:none}
+
+
+/* =============================================================================
+   My CSS
+   ========================================================================== */
+
+/* ---- base ---- */
+
+html,body{ 
+	width:200%;
+	height:200%;
+	background:#111;
+}
+
+html{
+  -webkit-tap-highlight-color: rgba(95, 190, 55, 0);
+}
+
+body{
+  font:normal 75% Arial, Helvetica, sans-serif;
+}
+
+
+/* ---- stats.js ---- */
+
+
+
+
+#stats{
+  border-radius: 3px 3px 0 0;
+  overflow: hidden;
+}
+
+
+
+
+/* ---- particles.js container ---- */
+
+#particles-js{
+  width: 200%;
+  height: 200%;
+  background-color: #b61924;
+  background-image: url('');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+#particles-js {
+  background-color: #28283e;
+}
+.overlayS-text {
+  color: #ffffff;
+  text-shadow: 0 0 10px #00fffb, 0 0 20px #00fffb, 0 0 30px #00fffb;
+  font-size: clamp(2rem, 5vw, 5rem);
+  font-weight: bold;
+  text-align: center;
+}
+
+
+.overlayS-text {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  font-size: clamp(3rem, 5vw, 5rem);
+
+}
+.overlayS-text {
+  color: white;
+  text-shadow: 1px 1px 0 #000000, 2px 2px 0 #84e6ff, 3px 3px 2px rgba(0, 0, 0, 0.5);
+  font-size: clamp(3rem, 5vw, 5rem);
+  font-weight: bold;
+  text-align:center;
+}
+.overlayS-text {
+  color: white;
+  text-shadow: 2px 2px 5px #6fd5d2b3; /* Subtle shadow */
+  font-size: clamp(2rem, 5vw, 5rem);
+  font-weight: bold;
+  text-align: center;
+}
+.overlayS-text {
+  font-size: clamp(2rem, 5vw, 5rem);
+  font-weight: bold;
+  text-align: center;
+
+  /* Apply gradient background */
+  background: linear-gradient(90deg,#ffffff, #ff00d9,#ffffff,#000000, #00fffb,#ffffff,#ffff2a,#000000,#ffffff);
+  
+  /* For WebKit-based browsers (Chrome, Safari, etc.) */
+  -webkit-background-clip: text; /* WebKit-specific */
+  
+  /* Standard property for future compatibility */
+  background-clip: text; /* Standard for future support in all browsers */
+
+  /* Make text transparent to show the background gradient */
+  color: transparent;
+
+  /* Optional: Adding an outline to the text (for WebKit browsers) */
+  -webkit-text-stroke: 2px #ffffff; /* Outline effect */
+  
+  /* Animation for the moving shine effect */
+  background-size: 200% 100%; /* Double the width to create the effect */
+  animation: shine 6s linear infinite; /* Shine animation */
+}
+
+/* Define the shine animation */
+@keyframes shine {
+  0% {
+    background-position: -200% 0;
+  }
+  50% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.overlayS-text {
+  color: transparent;
+  -webkit-text-stroke: 2px #ffffff; /* Outline color and thickness */
+  font-size: clamp(2rem, 5vw, 5rem);
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Your existing CSS styles */
+
+/* button */
+.btn {
+  margin: 120px;
+  padding: 5px 10px;
+  border: none;
+  font-size: 25px;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  position: absolute;
+  z-index: 9999; /* Ensures button stays on top of all elements */
+  margin-left: 700px;
+  
+  border-radius: 12px;
+}
+
+.btn::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+/* glow effect */
+.btn::before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 600%;
+  z-index: -1;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  filter: blur(8px);
+  animation: glowing 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+  opacity: 0;
+}
+
+/* glowing animation */
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+/* Hover effect */
+.btn:hover::before {
+  opacity: 1;
+}
+
+.btn:active:after {
+  background: transparent;
+}
+
+.btn:active {
+  color: #d9d1d1;
+  font-weight: bold;
+
+/* Add other styles as needed */
+}
+
+/* Your other styles for particles, text, etc. */
